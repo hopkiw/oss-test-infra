@@ -500,6 +500,7 @@ presubmits:
         imagePullPolicy: Always
         command:
         - "/go/main.sh"
+        args: ['cloud_image_tests']
   - name: infra-presubmit-gobuild
     cluster: gcp-guest
     run_if_changed: '\.go$'
@@ -513,6 +514,7 @@ presubmits:
         imagePullPolicy: Always
         command:
         - "/go/main.sh"
+        args: ['cloud_image_tests']
   - name: infra-presubmit-gotest
     cluster: gcp-guest
     run_if_changed: '\.go$'
@@ -526,4 +528,4 @@ presubmits:
         imagePullPolicy: Always
         command:
         - "/go/main.sh"
-
+        args: ['cloud_image_tests/testmanager']
